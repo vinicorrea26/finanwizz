@@ -67,7 +67,7 @@ const App: React.FC = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (loginForm.email === 'alexydivino@gmail.com' && loginForm.password === '7561490') {
+    if (loginForm.email === 'alexydivino@gmail.com' && loginForm.password === '123456') {
       const userData: User = { name: 'Alexy Divino', email: loginForm.email, officeName: 'Divino Consultoria Financeira' };
       setUser(userData);
       localStorage.setItem('accounting_user', JSON.stringify(userData));
