@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { analyzeFinancialDocuments } from './services/geminiService';
 import { FinancialAnalysis, User, Client } from './types';
@@ -44,7 +43,7 @@ const App: React.FC = () => {
     // Gerar background para login usando Nano Banana (gemini-2.5-flash-image)
     const generateBg = async () => {
       try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
         const response = await ai.models.generateContent({
           model: 'gemini-2.5-flash-image',
           contents: {
