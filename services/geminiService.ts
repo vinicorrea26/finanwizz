@@ -1,9 +1,8 @@
-
 import { GoogleGenAI, Type, Chat } from "@google/genai";
 import { FinancialAnalysis, Client } from "../types";
 import * as XLSX from "xlsx";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const processFile = async (file: File): Promise<any> => {
   const isExcel = file.name.endsWith('.xlsx') || file.name.endsWith('.xls');
